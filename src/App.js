@@ -19,7 +19,7 @@ function App() {
     if (Number(form.salary) < 1) { alert('emek haqqi 0-dan boyuk olmalidir'); return; }
 
     data.push({
-      id: Number(data[data.length-1].id + 1),
+      id: data.length===0?1:Number(data[data.length-1].id + 1),
       name: form.name,
       surname: form.surname,
       salary: form.salary
